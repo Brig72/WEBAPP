@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="hiber.UsersEntity" table="users">
+        <id name="id">
+            <column name="id" sql-type="serial" not-null="true"/>
+            <generator class="increment"/>
+        </id>
+        <property name="username">
+            <column name="username" sql-type="text" length="2147483647" not-null="true"/>
+        </property>
+        <property name="mail">
+            <column name="mail" sql-type="text" length="2147483647" not-null="true"/>
+        </property>
+        <property name="dateOfBirth">
+            <column name="date_of_birth" sql-type="date"/>
+        </property>
+        <property name="location">
+            <column name="location" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="discription">
+            <column name="discription" sql-type="text" length="2147483647"/>
+        </property>
+        <property name="callNumber">
+            <column name="call_number" sql-type="int4"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="text" length="2147483647" not-null="true"/>
+        </property>
+        <property name="enabled">
+            <column name="enabled" sql-type="int4" not-null="false" />
+        </property>
+        <property name="rolename">
+            <column name="rolename" sql-type="text" length="2147483647"/>
+        </property>
+
+
+    </class>
+</hibernate-mapping>
